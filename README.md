@@ -88,7 +88,7 @@ and especially the y coordinates were used along with distances between coordina
 	-REar = 16
 	-LEar = 17
 
-Results :
+## Results :
 ![580.jpg](Results%2F580.jpg)
 ![480.jpg](Results%2F480.jpg)
 
