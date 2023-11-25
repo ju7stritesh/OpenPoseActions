@@ -1,8 +1,8 @@
-#OpenPose
+# OpenPose
 
 'OpenPose' is an action pose estimation algorithm implemented using Tensorflow and can return the **actions of a person,skeleton, and head position relative to camera** of all the people in a given image. 
 
-##Prerequisites
+## Prerequisites
 
 -python3
 -tensorflow 1.12.0
@@ -18,7 +18,7 @@
 -fire
 -dill
 
-###Build c++ library for post processing (install swig using pip before doing so)
+### Build c++ library for post processing (install swig using pip before doing so)
 ```
 $ cd tf_pose/pafprocess
 $ swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
@@ -31,17 +31,17 @@ $ cd models/graph/cmu
 $ bash download.sh
 ```
 
-###Intall the environment yml file and intialize into the environment before running code
+### Intall the environment yml file and intialize into the environment before running code
 
 
-##How to run
+## How to run
 	* To run the program:
 	* Open up **Action.py**
 	* Store the images in **Images**
 	* Results will be stored in **Results** (create one if does not exist) folder
 
-##Logic
-###This program has the following main functions
+## Logic
+### This program has the following main functions
 
 - **body_separation**
  	* human is a dictionary of all identifiable keypoints
@@ -64,13 +64,11 @@ $ bash download.sh
   		* **TfPoseEstimator.draw_humans_joints** returns list of dictionaries of keypoints for each person in image
   		* Run **LyingPose** on image to receive final image with all info 
 
-##Extra
 
-###Logic
 Law of cosines were used to analyze varying degree angles from keypoints. The ratios of the lower body coordinates
 and especially the y coordinates were used along with distances between coordinates to make a final prediction on action.
 
-###Keypoint info
+### Keypoint info
 	-Nose = 0
 	-Neck = 1
 	-RShoulder = 2
@@ -89,5 +87,9 @@ and especially the y coordinates were used along with distances between coordina
 	-LEye = 15
 	-REar = 16
 	-LEar = 17
+
+Results :
+![580.jpg](Results%2F580.jpg)
+![480.jpg](Results%2F480.jpg)
 
 author - ju7stritesh@gmail.com
